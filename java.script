@@ -1,0 +1,18 @@
+// Array de frases motivacionais do CR7
+const frasesCR7 = [
+    '"Sua paixão e seu trabalho duro vão te levar longe."',
+    '"Eu não procuro os recordes, os recordes é que me procuram."',
+    '"Talento sem trabalho duro não é nada."',
+    '"Se você não acredita que é o melhor, nunca vai alcançar tudo o que é capaz."',
+    '"Eu vivo um sonho do qual nunca quero acordar."'
+];
+
+// Seleciona os elementos da página
+const elementoFrase = document.getElementById('frase');
+const botaoFrase = document.getElementById('btn-frase');
+
+// Função para trocar a frase ao clicar no botão
+botaoFrase.addEventListener('click', () => {
+    const indiceAleatorio = Math.floor(Math.random() * frasesCR7.length);
+    elementoFrase.textContent = frasesCR7[indiceAleatorio];
+});
